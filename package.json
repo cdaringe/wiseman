@@ -1,0 +1,39 @@
+{
+  "name": "wiseman",
+  "version": "1.0.0",
+  "main": "build/wiseman.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "pino": "^5.9.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.1.4",
+    "@types/pino": "^5.8.3",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier-standard": "^8.0.1",
+    "typescript": "^3.2.1"
+  },
+  "scripts": {
+    "build": "run-s compile build:docker",
+    "compile": "tsc",
+    "build:docker": "docker build -t cdaringe/wiseman .",
+    "format": "prettier-standard '{src,test,scripts}/**/*.{js,jsx,ts,tsx}'",
+    "start": "node build/wiseman.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "{src,test,scripts}/**/*.{js,jsx,ts,tsx}": [
+        "yarn format",
+        "git add"
+      ]
+    }
+  }
+}
