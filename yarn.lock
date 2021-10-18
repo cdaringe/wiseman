@@ -128,20 +128,29 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.12.tgz#e15a9d034d9210f00320ef718a50c4a799417c47"
   integrity sha512-Pr+6JRiKkfsFvmU/LK68oBRCQeEg36TyAbPhc2xpez24OOZZCuoIhWGTd39VZy6nGafSbxzGouFPTFD/rR1A0A==
 
-"@types/pino@^5.8.3":
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/@types/pino/-/pino-5.8.3.tgz#cd355c97a92d57927fe67ee5c7d1fa9349280805"
-  integrity sha512-dpHLhkuV1QNHC6SOnjSn75MeA0L9CGIWWp+axhm2JwgrYiViomUJF5tELWvGopKPrGXhggHAQv1Q5vkBapy6/w==
+"@types/pino-pretty@*":
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@types/pino-pretty/-/pino-pretty-4.7.1.tgz#2ce3f56f3cf4f9632374419d616ae2e6c933b935"
+  integrity sha512-l1ntNXdpVWsnPYUk5HyO5Lxfr38zLCgxVfEn/9Zhhm+nGF04/BiIou/m8XPwvoVZLV+livUo79VdHXMJPfUYxA==
   dependencies:
-    "@types/node" "*"
-    "@types/sonic-boom" "*"
+    "@types/pino" "*"
 
-"@types/sonic-boom@*":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@types/sonic-boom/-/sonic-boom-0.6.1.tgz#530d17e0b971c8f41cdfd78206171155aee58795"
-  integrity sha512-I0LVjE/VPehYvvMgmLZ8kSutqCaGzwDbyf74C5zoNwsb64KCppCJ7GkrLC4Sic3SzfEsGhcAVFpxR7UEpDi+bg==
+"@types/pino-std-serializers@*":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@types/pino-std-serializers/-/pino-std-serializers-2.4.1.tgz#f8bd52a209c8b3c97d1533b1ba27f57c816382bf"
+  integrity sha512-17XcksO47M24IVTVKPeAByWUd3Oez7EbIjXpSbzMPhXVzgjGtrOa49gKBwxH9hb8dKv58OelsWQ+A1G1l9S3wQ==
   dependencies:
     "@types/node" "*"
+
+"@types/pino@*", "@types/pino@6.3.11":
+  version "6.3.11"
+  resolved "https://registry.yarnpkg.com/@types/pino/-/pino-6.3.11.tgz#83652799e76b3ad692aaf68f6fbf994e83af5db2"
+  integrity sha512-S7+fLONqSpHeW9d7TApUqO6VN47KYgOXhCNKwGBVLHObq8HhaAYlVqUNdfnvoXjCMiwE5xcPm/5R2ZUh8bgaXQ==
+  dependencies:
+    "@types/node" "*"
+    "@types/pino-pretty" "*"
+    "@types/pino-std-serializers" "*"
+    sonic-boom "^2.1.0"
 
 abbrev@1:
   version "1.1.1"
@@ -280,6 +289,11 @@ atob@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+
+atomic-sleep@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/atomic-sleep/-/atomic-sleep-1.0.0.tgz#eb85b77a601fc932cfe432c5acd364a9e2c9075b"
+  integrity sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==
 
 babel-code-frame@^6.22.0:
   version "6.26.0"
@@ -2543,6 +2557,13 @@ sonic-boom@^0.6.3:
   integrity sha512-TMhj6kDJk9LLzCTTL8+HPCfFn4MwkE4P6k2Up89Rz949+DSRw90V62upRKC99rJEOmu4E9ljH5Otu2JSRmx+bg==
   dependencies:
     flatstr "^1.0.8"
+
+sonic-boom@^2.1.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-2.3.0.tgz#b1622bbd29111ed12be94a644ea6b586b6daea70"
+  integrity sha512-lEPaw654/4/rCJHz/TNzV4GIthqCq4inO+O3aFhbdOvR1bE+2//sVkcS+xlqPdb8gdjQCEE0hE9BuvnVixbnWQ==
+  dependencies:
+    atomic-sleep "^1.0.0"
 
 source-map-resolve@^0.5.0:
   version "0.5.2"
